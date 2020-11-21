@@ -1,2 +1,5 @@
 language = "python3"
-run = "python ./reverse_singly_linkedList.py"
+run = "python ./sorting/algorithms/bubble_sort.py"
+## FILE DIRECTORIES
+## ./sorting/algorithms/
+## ./sorting/questions/
