@@ -1,5 +1,5 @@
 language = "python3"
-run = "python ./sorting/algorithms/bubble_sort.py"
+run = "python ./sorting/algorithms/merge_sort.py"
 ## FILE DIRECTORIES
 ## ./sorting/algorithms/
 ## ./sorting/questions/
