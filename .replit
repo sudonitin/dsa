@@ -1,5 +1,5 @@
 language = "python3"
-run = "python ./sorting/algorithms/quick_sort.py"
+run = "python ./sorting/questions/sort_by_frequency.py"
 ## FILE DIRECTORIES
 ## ./sorting/algorithms/
 ## ./sorting/questions/
