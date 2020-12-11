@@ -26,11 +26,22 @@ def otherLogic(nums):
     i += 1
   return uniqueCount
 
+def Dec11(nums):
+  i,j = 0,1
+  while j < len(nums):
+    if nums[i] != nums[j]:
+      i += 1
+      nums[i] = nums[j]
+    else:
+      j += 1
+  return i + 1
+
 def main():
   nums = list(map(int, input().split(', ')))
-  # result = logic(nums)
-  result = otherLogic(nums)
-  print(result)
+  print('og', logic(nums))
+  print('copied', otherLogic(nums))
+  print('og', Dec11(nums))
+  # print(result)
   return 1
 
 main()
