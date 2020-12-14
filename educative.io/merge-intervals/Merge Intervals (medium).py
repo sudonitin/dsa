@@ -1,4 +1,4 @@
-# same bug (solution from educative)
+# bug resolved (solution from educative)
 def newLogic(nums):
     nums.sort(key=lambda x:x[0])
     print(nums)
@@ -42,8 +42,9 @@ def mergeIntervals(nums):
 
 def main():
     # nums = [[6,7], [2,4], [5,9]]
-    # nums = [[1,4], [2,6], [3,5]]
+    nums = [[1,4], [2,6], [3,5]]
     # nums = [[1,4], [2,5], [7,9]]
-    print(mergeIntervals(nums))
+    # print(mergeIntervals(nums))
+    print(newLogic(nums))
 
 main()
