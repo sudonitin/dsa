@@ -1,4 +1,4 @@
-def newLogic(nums):
+def newLogic(nums): # merging intervals
     print(nums)
     start = nums[0][0]
     end = nums[0][1]
@@ -13,7 +13,7 @@ def newLogic(nums):
     result.append([start, end])
     return result
 
-def insertInterval(nums, newInterval):
+def insertInterval(nums, newInterval): # adding new interval
     merged = []
     i = 0
     while nums[i][1] < newInterval[0]:
