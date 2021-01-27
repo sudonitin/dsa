@@ -43,22 +43,14 @@ def printPreOrder(root, s, calc, sol):
     # print(calc, sol)
     # return flag
 
-
-# def printPreOrder(root, s):
-# 	if root:
-#         calc += root.val
-#         sol += str(root.val) + "=>"
-# 		printPreOrder(root.left)
-#         if flag:
-#             calc -= root.val
-#             sol = sol[:-3]
-# 		printPreOrder(root.right)
-#     else:
-#         if calc == s:
-#             print(sol)
-#             return
-#         flag = True
-		
+def referredLogic(root, s):
+    if root is None:
+        return False
+    if root.val == s and root.left is None and root.right is None:
+    # if root.val == s: -- this line can be used if root node == sum
+        return True
+    
+    return referredLogic(root.left, s-root.val) or referredLogic(root.right, s-root.val)
 
 root = Node(1)
 root.left = Node(2)
@@ -68,4 +60,5 @@ root.left.right = Node(5)
 root.right.left = Node(6)
 root.right.right = Node(7)
 
-print(printPreOrder(root, 10, calc, sol))
+# print(printPreOrder(root, 10, calc, sol))
+print(referredLogic(root, 13))
