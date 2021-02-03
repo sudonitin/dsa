@@ -27,6 +27,25 @@ def find_all_unique_subsets(arr):
             result += temp
     return result
 
+# almost same logic optimised the duplicateCount part 
+# by maintaining startIndex and endIndex
+def referredLogic(arr):
+    arr.sort()
+    result = [[]]
+    startIndex, endIndex = 0, 0
+    for i in range(len(arr)):
+        if i > 0 and arr[i] == arr[i-1]:
+            startIndex = endIndex + 1
+        endIndex = len(result)
+        if i > 0 and arr[i] == arr[i-1]:
+            print(startIndex, endIndex)
+        for j in range(startIndex, endIndex):
+            temp = list(result[j])
+            temp.append(arr[i])
+            result.append(temp)
+    return result
+
 # print(find_all_subsets([1,3]))
-print(find_all_unique_subsets([1,3,3]))
-print(find_all_unique_subsets([1, 5, 3, 3]))
+# print(find_all_unique_subsets([1,3,3]))
+# print(find_all_unique_subsets([1, 5, 3, 3]))
+print(referredLogic([1,3,3]))
