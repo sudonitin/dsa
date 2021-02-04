@@ -1,11 +1,11 @@
 # a[:i+1] + [newElem] + a[i+1:]
 def getPermuatationOfSet(result, givenSet):
-    if len(result[0]) == 0:
-        return getPermuatationOfSet([[givenSet[0]]], givenSet)
-    else:
-        if len(result[0]) == len(givenSet):
+    if len(result[0]) == len(givenSet):
             # print(result)
             return result
+    elif len(result[0]) == 0:
+        return getPermuatationOfSet([[givenSet[0]]], givenSet)
+    else:
         newResult = []
         newElem = givenSet[len(result[0])]
         for i in range(len(result)):
