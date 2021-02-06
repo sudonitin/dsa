@@ -19,4 +19,5 @@ def find_all_subsets(arr):
     return result
 
 # print(find_all_subsets([1,3]))
-print(find_all_subsets([1,5,3]))
+# print(find_all_subsets([1,5,3]))
+print(find_all_subsets(["B", "A", "T"]))
