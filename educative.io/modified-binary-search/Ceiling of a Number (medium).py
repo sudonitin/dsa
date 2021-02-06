@@ -1,3 +1,5 @@
+# can be optimised by using simple binary search 
+# handle cases for less than and greater than, return for else case
 import sys
 def ceiling_of_num(arr, key):
     if key > arr[len(arr)-1]:
