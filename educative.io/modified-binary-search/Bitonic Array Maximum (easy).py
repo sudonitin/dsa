@@ -1,6 +1,5 @@
 def find_max_of_bitonic_array(arr):
     start, end = 0, len(arr)-1
-    full_length = len(arr)
     max_elem = -1
     while start <= end:
         middle = (start+end) // 2
