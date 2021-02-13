@@ -15,6 +15,8 @@ def find_k_closest_points(arr, k):
             heappush(maxheap, -arr[i])
     for i in list(maxheap):
         result.append(og_arr[arr.index(i*-1)])
+        og_arr.remove(og_arr[arr.index(i*-1)])
+        arr.remove(i*-1)
         # print(i, "**")
     # print(og_arr)
     return result
