@@ -1,5 +1,5 @@
 # Own logic
-
+# Doesn't work for negative numbers
 from heapq import *
 
 class kthLargestInStream:
@@ -9,7 +9,9 @@ class kthLargestInStream:
             heappush(minheap, i)
             if len(minheap)  > k:
                 heappop(minheap)
+        print(list(minheap), "--")
         self.minheap = minheap
+        # print()
 
     # update minheap
     def add(self, num):
