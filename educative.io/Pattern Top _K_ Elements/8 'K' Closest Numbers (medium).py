@@ -1,17 +1,20 @@
 from heapq import *
 
 # My Approach: Find top k elements of abs difference with x and sort it
-# Time: n * kLogk
-def kClosestNums(arr, k , x):
-    absDiff = [abs(x-i) for i in arr]
-    maxheap = []
-    for i in range(len(absDiff)):
-        heappush(maxheap, (-absDiff[i], arr[i]))
-        if len(maxheap) > k:
-            heappop(maxheap)
-    result = [i[1] for i in maxheap]
-    result.sort()
-    return result
+# Time: n + kLogk
+# TOTALLY WRONG
+# def kClosestNums(arr, k , x):
+#     absDiff = [(x-i) for i in arr]
+#     maxheap = []
+#     for i in range(k):
+#         heappush(maxheap, (-absDiff[i], arr[i]))
+#     for i in range(k, len(arr)):
+#         if maxheap[0][0] > -absDiff[i]:
+#         heappop(maxheap)
+#         heappush(maxheap, (-absDiff[i], arr[i]))
+#     result = [i[1] for i in maxheap]
+#     result.sort()
+#     return result
 
 # print(kClosestNums([5, 6, 7, 8, 9], 3, 7)) #[6, 7, 8]
 # print(kClosestNums([2, 4, 5, 6, 9], 3, 6)) #[4, 5, 6]
@@ -21,8 +24,8 @@ def kClosestNums(arr, k , x):
 # - find the closest number to X and then find the k elements 
 # by either using 2 pointer or minheap
 
-# minheap: Time - log n * klogk
-
+# minheap: Time - log n + klogk
+# 2 pointer: Time - log n * k
 def binary_search_closest_number(arr, x):
     start, end = 0, len(arr)-1
     closest_index = (start+end) // 2
